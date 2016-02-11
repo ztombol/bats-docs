@@ -32,7 +32,7 @@ If your project uses Git, the recommended method of installation is via
 a [submodule][git-book-submod].
 
 ```sh
-$ git submodule add https://github.com/ztombol/bats-core test/test_helper
+$ git submodule add https://github.com/ztombol/bats-core test/test_helper/bats-core
 $ git commit -m 'Add bats-core library'
 ```
 
