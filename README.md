@@ -22,14 +22,24 @@ than the others depending on your case. Make sure to install the
 required dependencies as well (e.g. install `bats-core` when installing
 `bats-assert`).
 
-The following examples install libraries in the `./test/test_helper`
-directory.
+## npm
+
+If your project is managed by npm, the recommended installation method is
+also via npm.
+
+```sh
+$ npm install --save-dev https://github.com/ztombol/bats-core
+$ npm install --save-dev https://github.com/ztombol/bats-assert
+```
 
 
 ## Git submodule
 
 If your project uses Git, the recommended method of installation is via
 a [submodule][git-book-submod].
+
+**note:** The following example installs libraries in the
+`./test/test_helper` directory.
 
 ```sh
 $ git submodule add https://github.com/ztombol/bats-core test/test_helper/bats-core
@@ -42,6 +52,9 @@ $ git commit -m 'Add bats-core library'
 If you do not use Git for version control, simply
 [clone][git-book-clone] the repository.
 
+**note:** The following example installs libraries in the
+`./test/test_helper` directory.
+
 ```sh
 $ git clone https://github.com/ztombol/bats-core test/test_helper/bats-core
 ```
@@ -52,12 +65,19 @@ $ git clone https://github.com/ztombol/bats-core test/test_helper/bats-core
 A library is loaded by sourcing the `load.bash` file in its main
 directory.
 
-Assuming that libraries are installed in `./test_helper`, adding the
-following line to a test file in the current directory loads the
+Assuming that libraries are installed in `test/test_helper`, adding the
+following line to a file in the `test` directory loads the
 `bats-core` library.
 
 ```sh
 load 'test_helper/bats-core/load'
+```
+
+For npm installations, load the libraries from `node_modules`:
+
+```sh
+load '../node_modules/bats-core/load'
+load '../node_modules/bats-assert/load'
 ```
 
 ***Note:*** *The [`load` function][bats-load] sources a file (with
