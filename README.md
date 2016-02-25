@@ -38,8 +38,8 @@ $ npm install --save-dev https://github.com/ztombol/bats-assert
 If your project uses Git, the recommended method of installation is via
 a [submodule][git-book-submod].
 
-**note:** The following example installs libraries in the
-`./test/test_helper` directory.
+*__Note:__ The following example installs libraries in the
+`./test/test_helper` directory.*
 
 ```sh
 $ git submodule add https://github.com/ztombol/bats-core test/test_helper/bats-core
@@ -52,8 +52,8 @@ $ git commit -m 'Add bats-core library'
 If you do not use Git for version control, simply
 [clone][git-book-clone] the repository.
 
-**note:** The following example installs libraries in the
-`./test/test_helper` directory.
+*__Note:__ The following example installs libraries in the
+`./test/test_helper` directory.*
 
 ```sh
 $ git clone https://github.com/ztombol/bats-core test/test_helper/bats-core
@@ -80,7 +80,7 @@ load '../node_modules/bats-core/load'
 load '../node_modules/bats-assert/load'
 ```
 
-***Note:*** *The [`load` function][bats-load] sources a file (with
+*__Note:__ The [`load` function][bats-load] sources a file (with
 `.bash` extension automatically appended) relative to the location of
 the current test file.*
 
