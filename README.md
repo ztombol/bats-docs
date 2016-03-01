@@ -11,7 +11,8 @@ Topics:
 - [Testing](#testing)
 
 Libraries:
-- [`bats-core`][bats-core] - supporting library for test helpers
+- [`bats-support`][bats-support] (formerly `bats-core`) - supporting
+  library for test helpers
 - [`bats-assert`][bats-assert] - common assertions
 
 
@@ -19,8 +20,8 @@ Libraries:
 
 There are multiple supported installation methods. One may be better
 than the others depending on your case. Make sure to install the
-required dependencies as well (e.g. install `bats-core` when installing
-`bats-assert`).
+required dependencies as well (e.g. install `bats-support` when
+installing `bats-assert`).
 
 ## npm
 
@@ -28,7 +29,7 @@ If your project is managed by npm, the recommended installation method is
 also via npm.
 
 ```sh
-$ npm install --save-dev https://github.com/ztombol/bats-core
+$ npm install --save-dev https://github.com/ztombol/bats-support
 $ npm install --save-dev https://github.com/ztombol/bats-assert
 ```
 
@@ -42,8 +43,8 @@ a [submodule][git-book-submod].
 `./test/test_helper` directory.*
 
 ```sh
-$ git submodule add https://github.com/ztombol/bats-core test/test_helper/bats-core
-$ git commit -m 'Add bats-core library'
+$ git submodule add https://github.com/ztombol/bats-support test/test_helper/bats-support
+$ git commit -m 'Add bats-support library'
 ```
 
 
@@ -56,7 +57,7 @@ If you do not use Git for version control, simply
 `./test/test_helper` directory.*
 
 ```sh
-$ git clone https://github.com/ztombol/bats-core test/test_helper/bats-core
+$ git clone https://github.com/ztombol/bats-support test/test_helper/bats-support
 ```
 
 
@@ -67,16 +68,16 @@ directory.
 
 Assuming that libraries are installed in `test/test_helper`, adding the
 following line to a file in the `test` directory loads the
-`bats-core` library.
+`bats-support` library.
 
 ```sh
-load 'test_helper/bats-core/load'
+load 'test_helper/bats-support/load'
 ```
 
 For npm installations, load the libraries from `node_modules`:
 
 ```sh
-load '../node_modules/bats-core/load'
+load '../node_modules/bats-support/load'
 load '../node_modules/bats-assert/load'
 ```
 
@@ -111,7 +112,7 @@ This function lets you load a library with only its name, instead of
 having to type the entire installation path.
 
 ```sh
-load_lib bats-core
+load_lib bats-support
 load_lib bats-assert
 ```
 
@@ -122,14 +123,14 @@ A library's test suite is located in its `test` subdirectory. Library
 dependencies are loaded from `$TEST_DEPS_DIR`, which defaults to the
 directory containing the library.
 
-For example, testing the `bats-assert` library requires the `bats-core`
-to be present in the same directory by default.
+For example, testing the `bats-assert` library requires the
+`bats-support` to be present in the same directory by default.
 
 ```
 $ tree -L 1
 .
 ├── bats-assert
-└── bats-core
+└── bats-support
 
 2 directories, 0 files
 $ bats bats-assert/test
@@ -145,7 +146,7 @@ versions.
 
 [bats]: https://github.com/sstephenson/bats
 [bats-pr-110]: https://github.com/sstephenson/bats/pull/110 
-[bats-core]: https://github.com/ztombol/bats-core
+[bats-support]: https://github.com/ztombol/bats-support
 [bats-assert]: https://github.com/ztombol/bats-assert
 [git-book-submod]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [git-book-clone]: https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository
