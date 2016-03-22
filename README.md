@@ -14,6 +14,7 @@ Libraries:
 - [`bats-support`][bats-support] (formerly `bats-core`) - supporting
   library for test helpers
 - [`bats-assert`][bats-assert] - common assertions
+- [`bats-file`][bats-assert] - filesystem related assertions
 
 
 # Installation
