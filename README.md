@@ -14,7 +14,7 @@ Libraries:
 - [`bats-support`][bats-support] (formerly `bats-core`) - supporting
   library for test helpers
 - [`bats-assert`][bats-assert] - common assertions
-- [`bats-file`][bats-assert] - filesystem related assertions
+- [`bats-file`][bats-file] - filesystem related assertions
 
 
 # Installation
@@ -149,6 +149,7 @@ versions.
 [bats-pr-110]: https://github.com/sstephenson/bats/pull/110 
 [bats-support]: https://github.com/ztombol/bats-support
 [bats-assert]: https://github.com/ztombol/bats-assert
+[bats-file]: https://github.com/ztombol/bats-file
 [git-book-submod]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [git-book-clone]: https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository
 [bats-load]: https://github.com/sstephenson/bats#load-share-common-code
