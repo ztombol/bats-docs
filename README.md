@@ -34,6 +34,36 @@ $ npm install --save-dev https://github.com/ztombol/bats-support
 $ npm install --save-dev https://github.com/ztombol/bats-assert
 ```
 
+## Homebrew
+
+OS X users can use [Homebrew](http://brew.sh/) to install libraries
+system-wide (see note below for alternatives).
+
+The forumlae are in a tap for various shell utilities by
+[@kaos](https://github.com/kaos), so enable the tap
+[kaos/shell](https://github.com/kaos/homebrew-shell) first.
+
+```sh
+$ brew tap kaos/shell
+```
+
+Then install the desired libraries.
+
+```sh
+$ brew install bats-assert
+$ brew install bats-file
+```
+
+*__Note:__ The required dependencies, `bats-support` as well as `bats`
+from the core tap will be installed automatically for you, with any of
+the two previous commands.*
+
+*__Note:__ Homebrew installs packages in a system-wide `/usr/local`
+prefix by default. This is encouraged praxis when using `brew`, but
+optional. See
+[Alternative Installs](https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Installation.md#alternative-installs)
+from the Homebrew documentation for details.*
+
 
 ## Git submodule
 
@@ -82,9 +112,21 @@ load '../node_modules/bats-support/load'
 load '../node_modules/bats-assert/load'
 ```
 
+For brew installations, load the libraries from `$(brew
+--prefix)/lib/` (the brew prefix is `/usr/local` by default):
+
+```sh
+TEST_BREW_PREFIX="$(brew --prefix)"
+load "${TEST_BREW_PREFIX}/lib/bats-support/load.bash"
+load "${TEST_BREW_PREFIX}/lib/bats-assert/load.bash"
+```
+
 *__Note:__ The [`load` function][bats-load] sources a file (with
 `.bash` extension automatically appended) relative to the location of
 the current test file.*
+
+*__Note:__ The [`load` function][bats-load] does NOT append a `.bash`
+ extension automatically when loading a file using an absolute path.*
 
 If a library depends on other libraries, they must be loaded as well.
 
