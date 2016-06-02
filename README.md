@@ -39,7 +39,7 @@ $ npm install --save-dev https://github.com/ztombol/bats-assert
 OS X users can use [Homebrew](http://brew.sh/) to install libraries
 system-wide (see note below for alternatives).
 
-The forumlae are in a tap for various shell utilities by
+The formulae are in a tap for various shell utilities by
 [@kaos](https://github.com/kaos), so enable the tap
 [kaos/shell](https://github.com/kaos/homebrew-shell) first.
 
