@@ -58,13 +58,6 @@ $ brew install bats-file
 from the core tap will be installed automatically for you, with any of
 the two previous commands.*
 
-*__Note:__ Homebrew installs packages in a system-wide `/usr/local`
-prefix by default. This is encouraged praxis when using `brew`, but
-optional. See
-[Alternative Installs](https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Installation.md#alternative-installs)
-from the Homebrew documentation for details.*
-
-
 ## Git submodule
 
 If your project uses Git, the recommended method of installation is via
