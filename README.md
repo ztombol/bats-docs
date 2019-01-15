@@ -75,7 +75,8 @@ a [submodule][git-book-submod].
 
 ```sh
 $ git submodule add https://github.com/ztombol/bats-support test/test_helper/bats-support
-$ git commit -m 'Add bats-support library'
+$ git submodule add https://github.com/ztombol/bats-assert test/test_helper/bats-assert
+$ git commit -m 'Add bats-support and bats-assert library'
 ```
 
 
@@ -89,6 +90,7 @@ If you do not use Git for version control, simply
 
 ```sh
 $ git clone https://github.com/ztombol/bats-support test/test_helper/bats-support
+$ git clone https://github.com/ztombol/bats-assert test/test_helper/bats-assert
 ```
 
 
@@ -103,6 +105,7 @@ following line to a file in the `test` directory loads the
 
 ```sh
 load 'test_helper/bats-support/load'
+load 'test_helper/bats-assert/load'
 ```
 
 For npm installations, load the libraries from `node_modules`:
@@ -188,7 +191,7 @@ versions.
 <!-- REFERENCES -->
 
 [bats]: https://github.com/sstephenson/bats
-[bats-pr-110]: https://github.com/sstephenson/bats/pull/110 
+[bats-pr-110]: https://github.com/sstephenson/bats/pull/110
 [bats-support]: https://github.com/ztombol/bats-support
 [bats-assert]: https://github.com/ztombol/bats-assert
 [bats-file]: https://github.com/ztombol/bats-file
