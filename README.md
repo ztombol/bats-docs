@@ -30,8 +30,8 @@ If your project is managed by npm, the recommended installation method is
 also via npm.
 
 ```sh
-$ npm install --save-dev https://github.com/ztombol/bats-support
-$ npm install --save-dev https://github.com/ztombol/bats-assert
+$ npm install --save-dev ztombol/bats-support
+$ npm install --save-dev ztombol/bats-assert
 ```
 
 ## Homebrew
