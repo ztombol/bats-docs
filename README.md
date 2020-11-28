@@ -32,6 +32,7 @@ also via npm.
 ```sh
 $ npm install --save-dev https://github.com/ztombol/bats-support
 $ npm install --save-dev https://github.com/ztombol/bats-assert
+$ npm install --save-dev https://github.com/ztombol/bats-file
 ```
 
 ## Homebrew
