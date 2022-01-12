@@ -40,18 +40,13 @@ OS X users can use [Homebrew](http://brew.sh/) to install libraries
 system-wide (see note below for alternatives).
 
 The forumlae are in a tap for various shell utilities by
-[@kaos](https://github.com/kaos), so enable the tap
-[kaos/shell](https://github.com/kaos/homebrew-shell) first.
+[@kaos](https://github.com/kaos).
+
+To install the desired libraries, run:
 
 ```sh
-$ brew tap kaos/shell
-```
-
-Then install the desired libraries.
-
-```sh
-$ brew install bats-assert
-$ brew install bats-file
+$ brew install kaos/shell/bats-assert
+$ brew install kaos/shell/bats-file
 ```
 
 *__Note:__ The required dependencies, `bats-support` as well as `bats`
